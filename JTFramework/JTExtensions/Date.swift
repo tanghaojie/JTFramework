@@ -7,7 +7,9 @@
 //
 
 extension Date {
-    var jtDateAndTimeFormateString: String {
-        return DateFormatter.jtDateAndTimeFormatter.string(from: self)
+    
+    public func jtCurrentLocaleString(format: String) -> String {
+        return JTCurrentLocaleDateFormatter(format: format).string(from: self)
     }
+
 }

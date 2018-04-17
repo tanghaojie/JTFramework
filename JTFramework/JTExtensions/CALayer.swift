@@ -7,7 +7,7 @@
 //
 
 extension CALayer {
-    var jtBorderUIColor: UIColor? {
+    public var jtBorderUIColor: UIColor? {
         get {
             guard let c = borderColor else { return nil }
             return UIColor(cgColor: c)
@@ -16,7 +16,7 @@ extension CALayer {
             borderColor = newValue?.cgColor
         }
     }
-    var jtShadowUIColor: UIColor? {
+    public var jtShadowUIColor: UIColor? {
         get {
             guard let c = shadowColor else { return nil }
             return UIColor(cgColor: c)

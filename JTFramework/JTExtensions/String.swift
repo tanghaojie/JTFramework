@@ -7,16 +7,13 @@
 //
 
 extension String {
-    var jtUtf8Encoded: Data {
+    public var jtUtf8Encoded: Data {
         return data(using: .utf8)!
     }
-    var jtDateAndTimeFormateDate: Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale.current
-        dateFormatter.dateFormat = global_DateAndTimeFormate
-        return dateFormatter.date(from: self)
+    public func jtCurrentLocaleDate(format: String) -> Date? {
+        return JTCurrentLocaleDateFormatter(format: format).date(from: self)
     }
-    func jtContainsCaseInsensitive(other: String) -> Bool {
+    public func jtContainsCaseInsensitive(other: String) -> Bool {
         return self.range(of: other, options: .caseInsensitive, range: nil, locale: nil) != nil
     }
 }

@@ -9,14 +9,14 @@
 import Foundation
 import MBProgressHUD
 
-class JTHUD {
+public class JTHUD {
     
     private let view: UIView
-    init(view: UIView) {
+    public init(view: UIView) {
         self.view = view
     }
     
-    func jtMBProgressHUD_Indeterminate(removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
+    public func jtMBProgressHUD_Indeterminate(removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.mode = .indeterminate
         hud.backgroundView.style = .blur

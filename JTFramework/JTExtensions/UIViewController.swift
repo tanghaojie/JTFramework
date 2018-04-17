@@ -8,14 +8,14 @@
 
 extension UIViewController {
     
-    func jtTopViewController() -> UIViewController {
+    public func jtTopViewController() -> UIViewController {
         if let navi = self.navigationController {
             return navi
         }
         return self
     }
     
-    func jtAlertWithUIAlertAction(
+    public func jtAlertWithUIAlertAction(
         title: String,
         message: String?,
         uiAlertAction:  [UIAlertAction],

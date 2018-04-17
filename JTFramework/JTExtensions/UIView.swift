@@ -9,7 +9,8 @@
 import MBProgressHUD
 
 extension UIView {
-    func jtGetResponder() -> UIViewController? {
+    
+    public func jtGetResponder() -> UIViewController? {
         for view in sequence(first: self.superview, next: { $0?.superview }) {
             if let responder = view?.next {
                 if responder.isKind(of: UIViewController.self) {

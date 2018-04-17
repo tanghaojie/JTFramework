@@ -8,7 +8,7 @@
 
 extension UIImage {
     
-    func jtData() -> (Data?, String) {
+    public func jtData() -> (Data?, String) {
         var data: Data? = UIImageJPEGRepresentation(self, 1)
         var fileExtension = ".jpg"
         if data == nil {
