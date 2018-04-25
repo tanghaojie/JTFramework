@@ -20,7 +20,7 @@ public class JTHUD {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.mode = .indeterminate
         hud.backgroundView.style = .blur
-        hud.removeFromSuperViewOnHide = true
+        hud.removeFromSuperViewOnHide = removeOnHide
         if let hd = delayTimeIfAutoHide {
             hud.hide(animated: true, afterDelay: hd)
         }
