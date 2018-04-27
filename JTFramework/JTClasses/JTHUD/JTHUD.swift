@@ -16,10 +16,21 @@ public class JTHUD {
         self.view = view
     }
     
-    public func jtMBProgressHUD_Indeterminate(removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
+    public func indeterminate(removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.mode = .indeterminate
         hud.backgroundView.style = .blur
+        hud.removeFromSuperViewOnHide = removeOnHide
+        if let hd = delayTimeIfAutoHide {
+            hud.hide(animated: true, afterDelay: hd)
+        }
+        return hud
+    }
+    public func textOnly(_ text: String, removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.bezelView.color = .clear
+        hud.mode = .text
+        hud.label.text = text
         hud.removeFromSuperViewOnHide = removeOnHide
         if let hd = delayTimeIfAutoHide {
             hud.hide(animated: true, afterDelay: hd)
