@@ -9,6 +9,7 @@ public protocol JTNibLoader {}
 public extension JTNibLoader where Self: UIView {
     static func loadFromNib(_ nibname: String? = nil) -> Self {
         let loadname = nibname == nil ? "\(self)" : nibname!
-        return Bundle.main.loadNibNamed(loadname, owner: nil, options: nil)?.first as! Self
+        let x = Bundle.main.loadNibNamed(loadname, owner: nil, options: nil)?.first as! Self
+        return x
     }
 }
