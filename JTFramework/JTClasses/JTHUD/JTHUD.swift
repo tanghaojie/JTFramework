@@ -26,6 +26,17 @@ public class JTHUD {
         }
         return hud
     }
+    public func indeterminateWithText(_ text: String, removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .indeterminate
+        hud.backgroundView.style = .blur
+        hud.label.text = text
+        hud.removeFromSuperViewOnHide = removeOnHide
+        if let hd = delayTimeIfAutoHide {
+            hud.hide(animated: true, afterDelay: hd)
+        }
+        return hud
+    }
     public func textOnly(_ text: String, removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.bezelView.color = .clear
