@@ -197,11 +197,50 @@ extension Tianditu_NameSearchType: JTEnum {
         case ._education, .middleAndPrimarySchool, .college:
             return Assets.education
             
+        case .healthCare, ._hospital, ._clinic, ._medicalExamination, ._healthCare, ._animalHospital, ._drugStore:
+            return Assets.health
+            
+        case ._delicious, .exoticismFood, .chineseFood, ._sichuanFood, .specialDelicousFood, ._hotpot, ._japanFood, ._specialSnackFood ,.cookedFoodStore:
+            return Assets.delicious
+            
+    case .entertainment, .culturalFacilities ,._entertainment, ._park, ._movieTheater, ._theater, ._KTV, ._bar, ._internetCafe, .exercise ,._swim, ._golf, ._badminton, ._tennis, ._exercise ,._yoga:
+            return Assets.entertainment
+            
+        case .travel:
+            return Assets.travel
+            
+        case .hotel, ._starHotel, ._businessHotel ,._guestHotel:
+            return Assets.hotel
+            
+        case .religion:
+            return Assets.religion
+            
+        case .shoppingService, ._supermarket, ._mall, ._digitalAndElectricStore, ._localSpecialty, ._furnitureBuildingMaterials:
+            return Assets.shopping
+
         case .financeAndInsurance, ._bank, ._ATM, ._securities:
             return Assets.financeAndInsurance
             
+        case .carService, ._GAS, ._parkingLot, ._carServiceArea:
+            return Assets.car
+            
+        case .dailyService, ._waterAndElectricityAndGas, ._housingAgency, ._beautySalons, ._toilet ,._ticketSales:
+            return Assets.daily
+            
+        case .mediaAndCommunication:
+            return Assets.media
+            
+        case ._safetyAndFireAndEmergency:
+            return Assets.safe
+            
+        case .company:
+            return Assets.company
+            
+        case .welfareInstitution:
+            return Assets.welfare
+            
         default:
-            return Assets.search
+            return Assets.place
         }
     }
 }
