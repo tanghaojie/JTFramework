@@ -15,4 +15,10 @@ class Assets {
     static let location = UIImage(named: "location")
     static let rightArrow = UIImage(named: "rightArrow")
     static let point = UIImage(named: "point")
+    static let financeAndInsurance = UIImage(named: "financeAndInsurance")
+    static let search = UIImage(named: "search")
+    static let naturalGeographicalName = UIImage(named: "naturalGeographicalName")
+    static let humanGeographicalName = UIImage(named: "humanGeographicalName")
+    static let goverment = UIImage(named: "goverment")
+    static let education = UIImage(named: "education")
 }

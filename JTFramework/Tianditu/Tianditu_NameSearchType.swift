@@ -179,12 +179,29 @@ extension Tianditu_NameSearchType: JTEnum {
             
         case .welfareInstitution: return "17"
 
-            
         case .unknown: return ""
    
         }
     }
     public var image: UIImage? {
-        return nil
+        switch self {
+        case .naturalGeographicalName:
+            return Assets.naturalGeographicalName
+            
+        case .humanGeographicalName, ._station, ._trainStation, ._subwayStation, ._carStation:
+            return Assets.humanGeographicalName
+
+        case .goverment:
+            return Assets.goverment
+            
+        case ._education, .middleAndPrimarySchool, .college:
+            return Assets.education
+            
+        case .financeAndInsurance, ._bank, ._ATM, ._securities:
+            return Assets.financeAndInsurance
+            
+        default:
+            return Assets.search
+        }
     }
 }
