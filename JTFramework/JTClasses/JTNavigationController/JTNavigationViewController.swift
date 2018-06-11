@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import JTFramework
 
 open class JTNavigationViewController: UIViewController {
 

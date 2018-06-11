@@ -16,10 +16,10 @@ public class JTHUD {
         self.view = view
     }
     
-    public func indeterminate(removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil) -> MBProgressHUD {
+    public func indeterminate(removeOnHide: Bool = true, delayTimeIfAutoHide: TimeInterval? = nil, style: MBProgressHUDBackgroundStyle = .blur) -> MBProgressHUD {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         hud.mode = .indeterminate
-        hud.backgroundView.style = .blur
+        hud.backgroundView.style = style
         hud.removeFromSuperViewOnHide = removeOnHide
         if let hd = delayTimeIfAutoHide {
             hud.hide(animated: true, afterDelay: hd)
