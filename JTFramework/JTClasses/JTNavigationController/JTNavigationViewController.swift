@@ -143,7 +143,7 @@ extension JTNavigationViewController {
     }
 }
 extension JTNavigationViewController {
-    @objc private func backButtonTouchUpInside() {
+    @objc open func backButtonTouchUpInside() {
         delegate?.backTouchUpInsideBegin()
         let b = optionalDelegate?.backTouchUpInsideRecognizeJTNavigation()
         if let bb = b, !bb { return }
