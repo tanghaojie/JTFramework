@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double JTFrameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char JTFrameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <JTFramework/PublicHeader.h>
-
-

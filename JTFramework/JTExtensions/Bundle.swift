@@ -14,8 +14,7 @@ extension Bundle {
     static func getUserLanguageBundle() -> Bundle? {
         var lang = JTUserDefaults.shareInstance.getUserLanguage() ?? ""
         if lang == "" {
-            guard let appleLang = JTUserDefaults.shareInstance.getAppleLanguage() else { return nil }
-            lang = appleLang
+            lang = JTLanguages.chinese.rawValue
             var count = 0
             while(!JTUserDefaults.shareInstance.setUserLanguage(lang)) {
                 if count > 15 { abort() }
