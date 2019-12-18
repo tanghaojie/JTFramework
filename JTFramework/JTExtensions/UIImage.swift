@@ -9,10 +9,10 @@
 extension UIImage {
     
     public func jtData() -> (Data?, String) {
-        var data: Data? = UIImageJPEGRepresentation(self, 1)
+        var data: Data? = self.jpegData(compressionQuality: 1)
         var fileExtension = ".jpg"
         if data == nil {
-            data = UIImagePNGRepresentation(self)
+            data = self.pngData()
             fileExtension = ".png"
         }
         return (data, fileExtension)

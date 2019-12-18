@@ -20,10 +20,6 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 SCGCFramework*
-project.pbxproj
-
-podfile
-Podfile.lock
 
 #o Obj-C/Swift specific
 *.hmap

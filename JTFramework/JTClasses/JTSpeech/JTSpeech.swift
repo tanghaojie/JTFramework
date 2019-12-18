@@ -90,13 +90,15 @@ extension JTSpeech {
             throw JTSpeechError.restricted
         case .authorized:
             break;
+        @unknown default:
+            fatalError()
         }
     }
     private func setupAudioSession() throws {
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryRecord, mode: AVAudioSessionModeMeasurement, options: .duckOthers)
-            try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
+            try audioSession.setCategory(AVAudioSession.Category.record, mode: AVAudioSession.Mode.measurement, options: .duckOthers)
+            try audioSession.setActive(true, options: AVAudioSession.SetActiveOptions.notifyOthersOnDeactivation)
         } catch {
             throw JTSpeechError.audioSessionError
         }

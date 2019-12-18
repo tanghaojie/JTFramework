@@ -19,7 +19,7 @@ extension UIViewController {
         title: String,
         message: String?,
         uiAlertAction:  [UIAlertAction],
-        preferredStyle: UIAlertControllerStyle = .alert,
+        preferredStyle: UIAlertController.Style = .alert,
         completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
         for action in uiAlertAction {

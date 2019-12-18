@@ -13,7 +13,7 @@ public protocol JTEnum {
     var image: UIImage? { get }
 }
 public extension JTEnum {
-    public var num: Int { return 0 }
-    public var strNum: String { return "0" }
-    public var text: String { return "" }
+    var num: Int { return 0 }
+    var strNum: String { return "0" }
+    var text: String { return "" }
 }
